@@ -1,4 +1,16 @@
 .route--active {
   font-weight: bold;
-  text-decoration: underline;
+}
+.index-nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #d9d9d9;
+    a {
+        flex:1;
+        color: #514f4f;
+        &:hover {
+            color: #23527c;
+        }
+        text-decoration: none;
+    }
 }

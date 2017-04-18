@@ -1,3 +1,18 @@
 .favorite-list {
-    
+    display:flex;
+    flex-wrap: wrap;//换行
+    align-content:flex-start;//与交叉轴起点对其
+    list-style-type: none;
+    -webkit-padding-start: 0;
+    li {
+        width: 174px;
+        margin: 8px;
+    }
+    &-img {
+        max-width: 100%;
+    }
+
+    &-alt {
+
+    }
 }

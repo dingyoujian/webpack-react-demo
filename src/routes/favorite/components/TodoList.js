@@ -8,8 +8,8 @@ export default class TodoList extends Component {
     let { onTodoClick, nodes } = this.props
     nodes = nodes.map((todo, index) =>
       <li key={'todolist' + index}>
-        <img src={todo.src} alt />
-        <span>{todo.name}</span>
+        <img className='favorite-list-img' src={todo.src} alt />
+        <span className='favorite-list-alt'>{todo.name}</span>
       </li>
     )
 

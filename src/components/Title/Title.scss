@@ -1,0 +1,17 @@
+.index-title {
+    height: 2rem;
+    margin: 2rem 0;
+    line-height: 3rem;
+    background-color: #FDF5E6;
+    border-radius: 2rem;
+
+    &-child {
+        position: relative;
+        top: -0.5rem;
+        background-color: #fff;
+        color: #F5DEB3;//#FF69B4
+        font-size: 3rem;
+        font-weight: bold;
+        padding: 0 2rem;
+    }
+}

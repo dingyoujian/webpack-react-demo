@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import TodoList from './TodoList'
 import AddTodo from './AddTodo'
 import './Favorite.scss'
+import Title from '../../../components/Title'
 
 export default class Favorite extends Component {
   // constructor(props) {
@@ -16,6 +17,7 @@ export default class Favorite extends Component {
     const {addTodo, completeTodo, nodes} = this.props
     return (
       <div>
+        <Title title='新番推荐'/>
         <TodoList
             onTodoClick={
                 index => completeTodo(index)

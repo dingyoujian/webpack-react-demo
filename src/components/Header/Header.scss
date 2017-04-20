@@ -5,12 +5,28 @@
     display: flex;
     flex-direction: row;
     background-color: #d9d9d9;
+    height: 3rem;
     a {
         flex:1;
-        color: #514f4f;
-        &:hover {
-            color: #23527c;
-        }
+        line-height: 3rem;
+        color: #fff;
+        font-weight: 700;
+        text-shadow: none;
         text-decoration: none;
+
+        &:hover::before,&:focus::before {
+            -webkit-transform: scale(0.8);
+        	-moz-transform: scale(0.8);
+        	transform: scale(0.8);
+        	opacity: 0;
+        }
+        &::before {
+            color: #514f4f;
+            content: attr(data-hover);
+            position: absolute;
+            -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+        	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+        	transition: transform 0.3s, opacity 0.3s;
+        }
     }
 }

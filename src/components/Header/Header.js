@@ -4,16 +4,16 @@ import './Header.scss'
 
 export const Header = () => (
   <div className='index-nav'>
-    <IndexLink to='/' activeClassName='route--active'>
-      Home
+    <IndexLink to='/' data-hover='首页' activeClassName='route--active'>
+      首页
     </IndexLink>
-    <Link to='/favorite' activeClassName='route--active'>
-      favorite
+    <Link to='/favorite' data-hover='番剧' activeClassName='route--active'>
+      番剧
     </Link>
-    <Link to='/counter' activeClassName='route--active'>
-      profile
+    <Link to='/counter' data-hover='留言板' activeClassName='route--active'>
+      留言板
     </Link>
-    <a href='http://www.bilibili.com/'>
+    <a href='http://www.bilibili.com/' data-hover='bilibili'>
       bilibili
     </a>
   </div>

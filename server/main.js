@@ -25,10 +25,13 @@ if (project.env === 'development') {
     quiet       : project.compiler_quiet,
     noInfo      : project.compiler_quiet,
     lazy        : false,
-    stats       : project.compiler_stats
+    stats       : project.compiler_stats,
   }))
   app.use(require('webpack-hot-middleware')(compiler, {
     path: '/__webpack_hmr'
+  }))
+  app.use(require('http-proxy-middleware')('/api', {
+    target: 'http://localhost:8000'
   }))
 
   // Serve static assets from ~/public since Webpack is unaware of

@@ -1,0 +1,37 @@
+.msg-root {
+    display: flex;
+    flex-direction: row;
+    &-src {
+        width: 8rem;
+        img {
+            width: 5rem;
+        }
+        flex: 0 0 auto;
+    }
+
+    &-content{
+        flex: 1 0 auto;
+        border-bottom: 1px solid #bdbdbd;
+        margin-bottom: 3rem;
+
+        &-user {
+            text-align: left;
+            margin-bottom: 1.5rem;
+
+            &-name {
+                color: #6d757a;
+            }
+
+            &-level {
+                margin-left: 2rem;
+            }
+        }
+        p {
+            text-align: left;
+        }
+    }
+
+    &-child {
+
+    }
+}

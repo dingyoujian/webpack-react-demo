@@ -13,7 +13,7 @@ export const Header = () => (
     <Link to='/messageboard' data-hover='留言板' activeClassName='route--active'>
       留言板
     </Link>
-    <Link to='/messageboard' data-hover='个人中心' activeClassName='route--active'>
+    <Link to='/profile' data-hover='个人中心' activeClassName='route--active'>
       个人中心
     </Link>
     <a href='http://www.bilibili.com/' data-hover='bilibili'>

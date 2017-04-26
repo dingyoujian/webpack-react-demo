@@ -129,6 +129,7 @@
     "eslint-plugin-standard": "^2.0.0",
     "express": "^4.14.0",
     "http-proxy-middleware": "^0.17.4",
+    "json-server": "^0.9.6",
     "karma": "^1.0.0",
     "karma-coverage": "^1.0.0",
     "karma-mocha": "^1.0.1",

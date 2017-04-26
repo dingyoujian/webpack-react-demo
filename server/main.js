@@ -6,6 +6,7 @@ const webpackConfig = require('../config/webpack.config')
 const project = require('../config/project.config')
 const compress = require('compression')
 
+
 const app = express()
 
 // Apply gzip compression

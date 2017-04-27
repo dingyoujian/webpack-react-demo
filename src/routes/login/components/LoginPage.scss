@@ -1,0 +1,45 @@
+.loginPage {
+    margin: 0 auto;
+    width: 20rem;
+    height: 50rem;
+
+    &-tabs {
+        line-height: 5rem;
+        height: 5rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+
+        a {
+            margin: 0 1rem;
+            color: #bdbdbd;
+            cursor: pointer;
+            transition: color .15s;
+            text-decoration: none;
+
+            &:hover {
+                color: #434343;
+                text-decoration: none;
+            }
+        }
+    }
+    &-logo {
+        width: 20rem;
+    }
+    input,button {
+        display: block;
+        width: 100%;
+        height: 3.5rem;
+        margin: 2rem 0;
+        border: 1px solid #bdbdbd;
+        border-radius: .5rem;
+        padding: 1rem;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .active {
+        color: #0f88eb !important;
+        text-decoration: underline !important;
+    }
+}

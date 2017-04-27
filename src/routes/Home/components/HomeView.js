@@ -1,5 +1,4 @@
 import React from 'react'
-import ConnorGif from '../assets/Kangna3.gif'
 import './HomeView.scss'
 import Title from '../../../components/Title'
 
@@ -11,9 +10,5 @@ export const HomeView = () => (
         type='application/x-shockwave-flash'/>
     </div>
 )
-// <img
-//    alt='Connor'
-//    className='duck'
-//    src={ConnorGif} />
 
 export default HomeView

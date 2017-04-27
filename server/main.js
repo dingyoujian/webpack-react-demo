@@ -5,19 +5,21 @@ const webpack = require('webpack')
 const webpackConfig = require('../config/webpack.config')
 const project = require('../config/project.config')
 const compress = require('compression')
-
-
+const httpProxy = require('http-proxy-middleware')
+const proxyConfig = {
+    target: 'http://127.0.0.1:8000',
+    changeOrigin: true,
+    pathRewrite: (path, req) => path.replace('/api', '')
+}
 const app = express()
 
 // Apply gzip compression
 app.use(compress())
-
 // ------------------------------------
 // Apply Webpack HMR Middleware
 // ------------------------------------
 if (project.env === 'development') {
   const compiler = webpack(webpackConfig)
-
   debug('Enabling webpack dev and HMR middleware')
   app.use(require('webpack-dev-middleware')(compiler, {
     publicPath  : webpackConfig.output.publicPath,
@@ -31,10 +33,8 @@ if (project.env === 'development') {
   app.use(require('webpack-hot-middleware')(compiler, {
     path: '/__webpack_hmr'
   }))
-  app.use(require('http-proxy-middleware')('/api', {
-    target: 'http://localhost:8000'
-  }))
 
+  app.use('/api', httpProxy(proxyConfig))
   // Serve static assets from ~/public since Webpack is unaware of
   // these files. This middleware doesn't need to be enabled outside
   // of development since this directory will be copied into ~/dist

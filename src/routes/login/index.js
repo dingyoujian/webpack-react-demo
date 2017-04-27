@@ -1,7 +1,7 @@
-import Login from './components/Login'
+import LoginPage from './components/LoginPage'
 
 // Sync route definition
 export default {
     path : 'login',
-    component : Login
+    component : LoginPage
 }

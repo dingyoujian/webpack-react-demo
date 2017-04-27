@@ -4,9 +4,9 @@ const common = {
         if (window.sessionStorage.getItem('isAuth')) {
             next()
         } else {
-            fetch('/user.json').then(response => {
-                debugger;
-            })
+            // fetch('/user.json').then(response => {
+            //     debugger;
+            // })
             replace('/login')
             next()
         }
